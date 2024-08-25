@@ -9,9 +9,9 @@ import { InfoIcon, Loader2, SearchIcon, CheckCircle2, HelpCircle, ArrowRight, Ar
 
 // Simulated generic database data
 const genericDatabaseData: Record<string, { status: string; lastUpdated: string }> = {
-  'VCFT-ABC1234': { status: 'Under Review', lastUpdated: '2023-08-25' },
-  'VCFT-DEF5678': { status: 'Approved', lastUpdated: '2023-08-24' },
-  'VCFT-GHI9012': { status: 'Additional Information Required', lastUpdated: '2023-08-23' },
+  'RCT-123-456-7890': { status: 'Under Review', lastUpdated: '2023-08-25' },
+  'RCT-234-567-8901': { status: 'Approved', lastUpdated: '2023-08-24' },
+  'RCT-345-678-9012': { status: 'Additional Information Required', lastUpdated: '2023-08-23' },
 }
 
 const steps = [
@@ -39,7 +39,7 @@ export default function EnhancedApplicationLookup() {
       setApplicationStatus(genericDatabaseData[submissionId])
       setCurrentStep(2)
     } else {
-      setError('No application found with the provided Submission ID.')
+      setError("No application found with the provided Submission ID.")
     }
 
     setIsLoading(false)
@@ -55,10 +55,10 @@ export default function EnhancedApplicationLookup() {
             exit={{ opacity: 0, y: -20 }}
           >
             <h2 className="text-2xl font-bold mb-4">Welcome to the Application Status Lookup</h2>
-            <p className="mb-4">Here's what you need to know:</p>
+            <p className="mb-4">Here&apos;s what you need to know:</p>
             <ul className="list-disc list-inside mb-6 space-y-2">
               <li>Ensure you have your Submission ID ready</li>
-              <li>The ID format is typically VCFT-XXXXXXX</li>
+              <li>The ID format is RCT-XXX-XXX-XXXX</li>
               <li>Your application status will be displayed instantly</li>
               <li>If you need help, our support team is just a click away</li>
             </ul>
@@ -81,7 +81,7 @@ export default function EnhancedApplicationLookup() {
                   <SearchIcon className="absolute left-2 top-2.5 h-4 w-4 text-gray-500" />
                   <Input
                     id="submissionId"
-                    placeholder="e.g. VCFT-ABC1234"
+                    placeholder="e.g. RCT-123-456-7890"
                     value={submissionId}
                     onChange={(e) => setSubmissionId(e.target.value)}
                     className="pl-8"
@@ -130,9 +130,9 @@ export default function EnhancedApplicationLookup() {
                 </div>
                 <Alert>
                   <HelpCircle className="h-4 w-4" />
-                  <AlertTitle>What's Next?</AlertTitle>
+                  <AlertTitle>What&apos;s Next?</AlertTitle>
                   <AlertDescription>
-                    We'll update you via email as your application progresses. If you have any questions, please don't hesitate to contact our support team.
+                    We&apos;ll update you via email as your application progresses. If you have any questions, please don&apos;t hesitate to contact our support team.
                   </AlertDescription>
                 </Alert>
               </div>
@@ -151,7 +151,7 @@ export default function EnhancedApplicationLookup() {
         <CardHeader>
           <CardTitle className="text-3xl font-bold text-center">Application Status Lookup</CardTitle>
           <CardDescription className="text-center">
-            Track the progress of your compensation application
+            Track the progress of your scholarship application
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -182,7 +182,7 @@ export default function EnhancedApplicationLookup() {
             <InfoIcon className="h-4 w-4" />
             <AlertTitle>Need assistance?</AlertTitle>
             <AlertDescription>
-              If you have any questions about your application or need further assistance, please contact our customer support team at <a href="mailto:support@victimcompfund.org" className="font-medium underline">support@victimcompfund.org</a> or call us at (555) 123-4567.
+              If you have any questions about your application or need further assistance, please contact our customer support team at <a href="mailto:support@scholarfundtest.org" className="font-medium underline">support@scholarfundtest.org</a> or call us at (555) 123-4567.
             </AlertDescription>
           </Alert>
         </CardFooter>
