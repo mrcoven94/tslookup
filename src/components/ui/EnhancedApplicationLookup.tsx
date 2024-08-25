@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { InfoIcon, Loader2, SearchIcon, CheckCircle2, HelpCircle, ArrowRight, ArrowLeft } from 'lucide-react'
 
-// Simulated generic database data
 const genericDatabaseData: Record<string, { status: string; lastUpdated: string }> = {
   'RCT-123-456-7890': { status: 'Under Review', lastUpdated: '2023-08-25' },
   'RCT-234-567-8901': { status: 'Approved', lastUpdated: '2023-08-24' },
@@ -34,7 +33,6 @@ export default function EnhancedApplicationLookup() {
     setIsLoading(true)
     setError('')
 
-    // Simulate API call to generic database
     await new Promise(resolve => setTimeout(resolve, 1500))
 
     if (genericDatabaseData[submissionId]) {
