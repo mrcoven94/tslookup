@@ -1,12 +1,10 @@
-'use client'
-
 import React from 'react'
-import EnhancedApplicationLookup from '@/components/ui/EnhancedApplicationLookup'
+import ApplicationLookupClient from '@/components/ui/ApplicationLookupClient'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <EnhancedApplicationLookup />
+      <ApplicationLookupClient />
     </main>
   )
 }

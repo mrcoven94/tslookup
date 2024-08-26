@@ -21,7 +21,7 @@ const steps = [
   { title: 'View Status', description: 'See the current status of your application' },
 ]
 
-export default function EnhancedApplicationLookup() {
+export default function ApplicationLookupClient() {
   const [submissionId, setSubmissionId] = useState('')
   const [applicationStatus, setApplicationStatus] = useState<null | { status: string, lastUpdated: string }>(null)
   const [isLoading, setIsLoading] = useState(false)
